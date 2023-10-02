@@ -1,3 +1,4 @@
+import SideBar from '@/components/SideBar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -16,7 +17,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className='h-full'>
+          <div className='hidden md:flex h-full w-56 flex-col fixed inset-y-0 z-50'>
+            <SideBar />
+          </div>
+          <main className='md:pl-56 h-full'>
+            {children}
+          </main>
+        </div>
+      </body>
     </html>
   )
 }
