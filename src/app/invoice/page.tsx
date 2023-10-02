@@ -4,7 +4,9 @@ type Props = {}
 
 const InvoicePage = (props: Props) => {
   return (
-    <div>InvoicePage</div>
+    <div className='h-full border-r flex flex-col overflow-y-auto bg-slate-50'>
+        Helllo World
+    </div>
   )
 }
 
